@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <option name="deprecationWarnings" value="true" />
+    <option name="uncheckedWarnings" value="true" />
+    <option name="featureWarnings" value="true" />
+    <profile name="SBT 1" modules="project" />
+    <profile name="SBT 2" modules="tablemagiclib,tablemagic,tablemagicfuture,tablemagicutil">
+      <plugins>
+        <plugin path="macroparadise" />
+        <plugin path="$USER_HOME$/.ivy2/cache/org.scalameta/paradise_2.11.8/jars/paradise_2.11.8-3.0.0-M7.jar" />
+      </plugins>
+    </profile>
+    <profile name="SBT 3" modules="model,root">
+      <parameters>
+        <parameter value="-Xplugin-require:macroparadise" />
+      </parameters>
+      <plugins>
+        <plugin path="$USER_HOME$/.ivy2/cache/org.scalameta/paradise_2.11.8/jars/paradise_2.11.8-3.0.0-M7.jar" />
+      </plugins>
+    </profile>
+  </component>
+</project>
